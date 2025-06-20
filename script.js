@@ -1,4 +1,4 @@
-document.querySelectorAll('#navbar a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('#barraNav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetElement = document.querySelector(this.getAttribute('href'));
@@ -7,8 +7,6 @@ document.querySelectorAll('#navbar a[href^="#"]').forEach(anchor => {
         }
     });
 });
-
-
 
 const sections = document.querySelectorAll('section');
 const observer = new IntersectionObserver((entries, observer) => {

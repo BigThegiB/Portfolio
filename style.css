@@ -15,47 +15,58 @@ body {
     padding: 0 20px;
 }
 
-#navbar {
+#barraNav {
     background: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-#navbar .container {
+#barraNav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 3.2rem;
 }
 
-#navbar .logo a {
+#barraNav .logo a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: bold;
+    padding: 0.2rem 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-#navbar ul {
+#barraNav ul {
     list-style: none;
     padding: 0;
     display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-#navbar ul li {
+#barraNav ul li {
     margin-left: 20px;
 }
 
-#navbar ul li a {
+#barraNav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.95rem;
+    padding: 0.2rem 0.5rem;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-#navbar ul li a:hover {
+#barraNav ul li a:hover {
     color: #50b3a2;
 }
 
@@ -100,14 +111,14 @@ section.visible {
     margin-bottom: 2vh;
 }
 
-.hero-social-links {
+.hero-socials {
     margin-bottom: 3vh;
     z-index: 6;
     display: flex; 
     justify-content: center;
 }
 
-.hero-icon {
+.icone-hero {
     color: #fff;
     margin: 0 2vw;
     text-decoration: none;
@@ -115,11 +126,11 @@ section.visible {
     display: inline-block;
 }
 
-.hero-icon:hover {
+.icone-hero:hover {
     transform: scale(1.1);
 }
 
-.hero-pearto {
+.pearto {
     position: absolute;
     bottom: 3vh;
     right: 8vw;
@@ -128,7 +139,7 @@ section.visible {
     z-index: 0;
 }
 
-.hero-thought-cloud { 
+.hero-bolha { 
     position: absolute;
     width: 93vw;      
     height: auto;
@@ -137,19 +148,19 @@ section.visible {
     z-index: 1; 
 }
 
-#about {
+#sobre {
     padding: 4rem 0;
     background: #fff;
 }
 
-#about h2, #skills h2, #projects h2, #outras-materias h2, #contact h2 {
+#sobre h2, #habilidades h2, #projetos h2, #outras-materias h2, #contato h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #333;
 }
 
-#about .about-content {
+#sobre .sobre-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,12 +168,12 @@ section.visible {
     gap: 2rem;
 }
 
-#skills {
+#habilidades {
     padding: 4rem 0;
     text-align: center;
 }
 
-.skills-subtitle {
+.habilidades-legenda {
     font-size: 0.9rem;
     color: #666;
     margin-top: -1.5rem;
@@ -187,32 +198,33 @@ section.visible {
     transform: scale(1.1);
 }
 
-#projects {
+#projetos {
     padding: 4rem 0;
     background: #fff;
 }
 
-.projects-grid {
+.projetos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.project-card {
+.card-projetos {
     background: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 
-.project-card:hover {
+.card-projetos:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    box-shadow: none;
 }
 
-.project-card img {
+.card-projetos img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
@@ -234,14 +246,12 @@ section.visible {
     margin-right: auto;
 }
 
-.project-card h3 {
-    font-size: 1.5rem;
-    margin: 1rem 1rem 0.5rem 1rem;
-    color: #333;
+.card-projetos h3 {
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
 }
 
-.project-card p {
-    padding: 0 1rem 1rem 1rem;
+.card-projetos p {
+    padding: 0 0.5rem 1rem 0.5rem;
     font-size: 0.95rem;
     color: #555;
 }
@@ -254,7 +264,7 @@ section.visible {
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.9rem;
-    margin: 0 0.5rem 1rem 1rem;
+    margin: 0 0 1rem 0.5rem;
     transition: background-color 0.3s ease;
 }
 
@@ -268,7 +278,7 @@ section.visible {
     text-align: center;
 }
 
-.materias-buttons {
+.btnMaterias {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,31 +287,31 @@ section.visible {
     flex-wrap: wrap;
 }
 
-#contact {
+#contato {
     padding: 4rem 0;
     text-align: center;
 }
 
-#contact p {
+#contato p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
 }
 
-#contact a {
+#contato a {
     color: #50b3a2;
     text-decoration: none;
     font-weight: bold;
 }
 
-#contact a:hover {
+#contato a:hover {
     text-decoration: underline;
 }
 
-.social-links {
+.socials {
     margin-top: 1rem;
 }
 
-.social-icon {
+.icone-redes {
     font-size: 2rem;
     color: #333;
     margin: 0 10px;
@@ -310,13 +320,13 @@ section.visible {
     display: inline-block;
 }
 
-.social-icon img {
+.icone-redes img {
     width: 22px;
     height: 22px;
     vertical-align: middle;
 }
 
-.social-icon:hover {
+.icone-redes:hover {
     color: #50b3a2;
     transform: scale(1.2);
 }
@@ -330,17 +340,17 @@ footer {
 }
 
 @media(max-width: 768px) {
-    #navbar .container {
+    #barraNav .container {
         flex-direction: column;
     }
 
-    #navbar ul {
+    #barraNav ul {
         margin-top: 1rem;
         flex-direction: column;
         align-items: center;
     }
 
-    #navbar ul li {
+    #barraNav ul li {
         margin: 0.5rem 0;
     }
 
@@ -352,7 +362,7 @@ footer {
         font-size: 1.2rem;
     }
 
-    #about .about-content {
+    #sobre .sobre-content {
         flex-direction: column;
         text-align: center;
     }
